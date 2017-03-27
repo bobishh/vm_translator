@@ -1,11 +1,13 @@
-require 'vm_translator/command/base'
-
 module VMTranslator
   module Command
     # represents add command
-    class Add < Base
+    class Add
       def to_asm
-        'asm string for add'
+        "@SP\nA=M\nD=M\n@SP\nM=M-1\nA=M\nM=M+D\n"
+      end
+
+      def to_s
+        "\\ add:\n#{to_asm}"
       end
     end
   end

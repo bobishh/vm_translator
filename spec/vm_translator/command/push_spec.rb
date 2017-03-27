@@ -2,8 +2,8 @@ require 'spec_helper'
 require 'vm_translator/command/push'
 
 describe VMTranslator::Command::Push do
-  let(:subject) { described_class.new('constant', 1) }
-  let(:expected) { "@1\nD=A\n@SP\nA=M\nM=D\n@SP\nM=M+1" }
+  let(:subject) { described_class.new('constant', 2) }
+  let(:expected) { "@2\nD=A\n@SP\nA=M\nM=D\n@SP\nM=M+1" }
 
   it 'exists' do
     expect(subject).to be_kind_of(VMTranslator::Command::Push)

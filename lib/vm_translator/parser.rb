@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'vm_translator/command/builder'
-require 'pry'
 
 module VMTranslator
   # parses row and returns command
